@@ -4,11 +4,14 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { AutenticacaoService } from '../services/autenticacao'
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from "angularfire2";
 import {AngularFireDatabase } from 'angularfire2/database';
 import { Chat } from '../pages/chat/chat';
+import { SigninPage } from "../pages/sign-in/sign-in";
 
 export const firebaseConfig = {
 
@@ -25,6 +28,7 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    SigninPage,
     Chat
   ],
   imports: [
@@ -36,12 +40,14 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
+    SigninPage,
     Chat
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
+    AutenticacaoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
