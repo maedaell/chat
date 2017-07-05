@@ -9,9 +9,10 @@ import { AutenticacaoService } from '../services/autenticacao'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from "angularfire2";
-import {AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Chat } from '../pages/chat/chat';
 import { SigninPage } from "../pages/sign-in/sign-in";
+import { SignupPage } from "../pages/sign-up/sign-up";
 
 export const firebaseConfig = {
 
@@ -29,6 +30,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     SigninPage,
+    SignupPage,
     Chat
   ],
   imports: [
@@ -41,6 +43,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     SigninPage,
+    SignupPage,
     Chat
   ],
   providers: [
