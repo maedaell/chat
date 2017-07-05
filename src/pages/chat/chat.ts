@@ -26,13 +26,18 @@ export class Chat {
 
   enviarMsg() {
     let msg = {
-      texto: this.authService.get_usuario + this.mensagem,
+      texto: this.authService.usuario + " say " + this.mensagem + " : " + new Date(),
+      // texto: this.mensagem,
       data: new Date()
     };
     this.lista.push(msg).then(()=> {
       this.mensagem = "";
       }
     )
+  }
+
+  clear() {
+    this.lista.remove();
   }
 
 }

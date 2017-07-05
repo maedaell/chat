@@ -2,11 +2,13 @@ import firebase from 'firebase';
 
 export class AutenticacaoService {
 
-    private usuario = "";
-    private senha = "";
+    public usuario: string = "";
+    public senha: string = "";
 
     signup(email: string, senha: string) {
 
+        this.usuario = email;
+        this.senha = senha;
         return firebase.auth().createUserWithEmailAndPassword(email, senha);
 
     }
@@ -21,14 +23,6 @@ export class AutenticacaoService {
 
     logout() {
         firebase.auth().signOut();
-    }
-
-    get_usuario() {
-      return this.usuario;
-    }
-
-    get_senha() {
-      return this.senha;
     }
 
 }

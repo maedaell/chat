@@ -12,6 +12,7 @@
     </ion-item>
     <ion-item>
       <button ion-button (click)="enviarMsg()">Enviar</button>
+      <button ion-button (click)="clear()">Limpar</button>
     </ion-item>
     <ion-item *ngFor="let item of lista | async">
       <p>{{item.texto}}</p>

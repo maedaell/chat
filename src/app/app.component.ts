@@ -16,6 +16,7 @@ import { Chat } from "../pages/chat/chat";
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
   // rootPage:any = Chat;
   isAuthenticated: boolean;
