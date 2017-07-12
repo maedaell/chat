@@ -39,7 +39,8 @@ export class MyApp {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.isAuthenticated=true;
-        console.log("login sucess");
+        console.log("login sucess " + user.email);
+        this.autenticacaoService.usuario = user.email
         this.nav.setRoot(this.chat);
       } else {
         this.isAuthenticated=false;
